@@ -1,0 +1,595 @@
+/*general styling*/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins",sans-serif;
+    line-height: 1.5;
+    user-select: none;
+}
+
+/*styling the nav bar*/
+nav{
+    display: flex;
+    padding: 8px 60px 5px 35px;
+    justify-content: space-between;
+    place-items: center;
+    background:#2C3333;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+/*styling the logo*/
+nav h2{
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+/*styling the navbar*/
+nav .nav_bar{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+nav .nav_bar .sidebar{
+    display: flex;
+    place-items: center;
+    gap: 1.5rem;
+}
+nav .nav_bar .sidebar li a{
+    color: #fff;
+    font-size: 14px;
+}
+nav .nav_bar .sidebar li a:hover,nav .nav_bar .social a:hover{
+    color: #FF5733;
+}
+
+nav .nav_bar .social{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+nav .nav_bar .social a{
+    color: #fff;
+}
+/*styling the background*/
+.back{
+    background-image: url("photos/luxa.org-brightness-pexels-victor-freitas-703012.jpg");
+    width: 100%;
+    height: 100vh;
+    /*------------this is used to cover the whole of the section*/
+    background-size: cover;
+    z-index: -1;
+}
+.back .overlay{
+    background: #171819;
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+}
+.close-btn{
+    display: none;
+}
+/*STYLIING THE HEADER*/
+#header{
+    position: absolute;
+    /*this is to put the section on the midlle of the previous background*/
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    height: 37.6rem;
+    color: #fff;
+    padding-top: 12rem;
+}
+
+#header h3{
+    font-size: 15px;
+    font-weight: 50;
+    color: #7f8c8d;
+}
+#header h2{
+    font-size: 38px;
+    font-weight: 1700;
+}
+#header .button{
+    align-items: center;
+}
+#header .button .get_started,#header .button .learn_more {
+    margin-top: 10px;
+    background: none;
+    padding: 0.7rem;
+}
+#header .button .learn_more {
+    border: 1px solid #FF5733;
+    border-radius: 3px;
+}
+#header .button .get_started a{
+    color: #fff;
+}    
+#header .button .get_started a:hover{
+    color: #FF5733;
+}
+#header .button .learn_more a{
+    color: #FF5733;
+}
+
+#header .button .learn_more:hover{
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+/*styling the about section*/
+.about{
+    background: #171819;
+    align-items: center;
+}
+#about{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 9rem;
+    opacity: 0;
+    position: relative;
+    padding: 100px 190px 80px 150px;
+    transition: 2s;
+}
+
+#about .left{
+    text-align: left;
+    color: #fff;
+    border-right: #666262 solid 1px;
+    padding-right: 120px;
+}
+#about .left h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#about .left h5{
+    font-weight:400;
+    margin: 12px 0 15px;
+}
+
+#about .left p{
+    color: #666262;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#about .left button{
+    padding: 1rem;
+    width: 100%;
+    background: #EF5B0C;
+}
+#about .left button:hover{
+    background: #fff;
+}
+#about .left button a{
+    color: #fff;
+}
+#about .left button:hover a{
+    color: #EF5B0C;
+}
+
+#about .right{
+    align-items: center;
+    padding-top: 20px;
+    color: #fff;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#about .right h2{
+    margin-bottom: 15px;
+}
+#about .right  .part1{
+    margin: 15px 0;
+}
+#about .right h5{
+    color: #7f8c8d;
+}
+
+/*styling the classes section*/
+#instructor{
+    display: grid;
+    grid-template-columns: 35% 60%;
+    gap: 5rem;
+    padding: 100px 100px;
+    opacity: 0;
+    transition: 2s;
+    background: #f9f9f9;
+}
+#instructor .description h2{
+    font-size: 30px;
+    color: #212529;
+    margin-bottom: 20px;
+}
+#instructor .cards{
+    display: flex;
+    gap: 2rem;
+}
+
+#instructor .cards .card{
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    width: 100%;
+    height: 23rem;
+    box-shadow: 0.2rem 0.2rem 1.8rem rgba(0, 0, 0, 0.235);
+}
+#instructor .cards .card:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+#instructor .cards .card .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px ;
+}
+#instructor .cards .card img{
+    width: 100%;
+    height: 80%;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+}
+
+#instructor .cards .card .info .text h5{
+    font-weight: 50;
+}
+
+/*Styling the classes section*/
+#classes{
+    opacity: 0;
+    transition: 2s;
+}
+#classes .center{
+    text-align: center;
+    align-items: center;
+}
+#classes .center:nth-child(1){
+    color: #454e4f;
+    font-weight: 400;
+}
+#classes .cards{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    padding: 10px 150px 30px;
+    gap: 1rem;
+}
+
+#classes .cards .card{
+    width: 100%;
+    height: 26rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem ;
+}
+#classes .cards .card:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+#classes .cards .card img{
+    width: 100%;
+    height: 15rem;
+}
+#classes .cards .card .info{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0px 15px 10px;
+    align-items: center;
+}
+#classes .cards .card .description h3{
+    font-weight: 700;
+}
+#classes .cards .card .description h5{
+    font-weight: 50;
+}
+#classes .cards .card .price{
+    background:rgba(239, 91, 91, 0.833);
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+#classes .cards .card  p{
+    padding: 0 15px;
+}
+
+/*styling the contact section*/
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 70px 150px 80px;
+    transition: 2s;
+    opacity: 0;
+}
+#contact .left h2{
+    font-size: 33px;
+    margin-bottom: 15px;
+}
+#contact .left  form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#contact .left  form input,#contact .left  form textarea{
+    padding: 0.7rem;
+    border: 1px solid grey;
+}
+#contact .left  form input:focus,#contact .left  form textarea:focus{
+    border: 1px solid ;
+}
+#contact .left  form textarea{
+    height: 10rem;
+}
+#contact .left  form  button{
+    background: #000;
+    color:#fff;
+    padding: 0.7rem;
+    border: 1px solid ;
+}
+#contact .left  form  button:hover{
+    cursor: pointer;
+    background: #fff;
+    color:#000;
+}
+
+#contact .locations{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 5px 0 10px;
+} 
+#contact .locations h5{
+    font-weight: 50;
+}
+#contact .locations i{
+    color: red;
+}
+/*styling the footer section*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px 35px;
+    border-top: 1px rgba(0, 0, 0, 0.126) solid;
+    line-height: 1.5;
+    color: #343e3e;
+}
+footer h5{
+    font-weight: 50;
+}
+footer .contact .email,footer .contact .phone{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+footer .contact .email span,footer .contact .phone span{
+    color: red;
+    font-size: 18px;
+}
+/*media queries for tablettes*/
+@media screen and (max-width:920px){
+    nav{
+        justify-content: space-around;
+    }
+#about{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 4rem;
+    opacity: 1;
+    position: relative;
+    padding: 100px 10px 80px 80px;
+    transition: 2s;
+}
+
+#about .left{
+    text-align: left;
+    color: #fff;
+    border-right: #666262 solid 1px;
+    padding-right: 50px;
+}
+#about .left h2{
+    font-size: 24px;
+}
+#classes .cards{
+    padding: 10px 50px 30px;
+    gap: 0.4rem;
+}
+#classes .cards .card{
+    width: 95%;
+}
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 70px 50px 80px;
+}
+#contact .left h2{
+    font-size: 33px;
+    margin-bottom: 15px;
+}
+#contact .left  form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#contact .left  form input,#contact .left  form textarea{
+    padding: 0.7rem;
+    border: 1px solid grey;
+}
+#contact .left  form input:focus,#contact .left  form textarea:focus{
+    border: 1px solid ;
+}
+#contact .left  form textarea{
+    height: 10rem;
+}
+}
+/*media queries for small tablettes*/
+@media screen and (max-width:720px){
+    nav{
+        justify-content: space-between;
+        width: 96.49%;
+    }
+/*styling the navbar*/
+nav .nav_bar{
+    display: none;
+    margin-right: 3.4%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin-top: 2.8rem;
+    padding-top: 2rem;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.854);
+    flex-direction: column;
+    z-index: 100;
+}
+nav .nav_bar .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+nav .nav_bar .social{
+    gap: 1.5rem;
+}
+.close-btn{
+    display: block;
+    color: #fff;
+}
+.close-btn .close{
+    display: none;
+}
+    #about{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        gap: 4rem;
+        opacity: 1;
+        position: relative;
+        padding: 100px 40px 80px 40px;
+        transition: 2s;
+    }
+    
+    #about .left{
+        text-align: left;
+        color: #fff;
+        border-right: #666262 solid 1px;
+        padding-right: 50px;
+    }
+    #about .left h2{
+        font-size: 24px;
+    }
+    #instructor{
+        grid-template-columns: 100%;
+        gap: 3rem;
+        text-align: center;
+    }
+    #instructor .description h2{
+        margin-bottom: 10px;
+    }
+    #instructor .cards .card .info{
+        text-align: left;
+    }
+    #classes .cards{
+        padding: 10px 40px 10px;
+        gap: 2px;
+    }
+    #classes .cards .card{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    
+    .back{
+        background-position: center;
+    }
+    nav{
+        justify-content: space-between;
+        width: 100%;
+    }
+#contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 70px 50px 80px;
+}
+#contact .left h2{
+    text-align: center;
+    align-items: center;
+}
+#about{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding: 100px 40px 80px 40px;
+}
+#about .left{
+    text-align: center;
+    border-right: none;
+    padding-right: 0px;
+}
+#instructor{
+    padding: 100px 70px;
+}
+#instructor .cards{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#instructor .cards .card{
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    width: 100%;
+    height: 23rem;
+    box-shadow: 0.2rem 0.2rem 1.8rem rgba(0, 0, 0, 0.235);
+}
+#classes .cards{
+    grid-template-columns: 1fr;
+    padding: 10px 90px 30px 115px;
+    gap: 1rem;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+}
+@media screen and (max-width:400px){
+    
+    
+    #instructor .cards{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    #instructor .cards .card{
+        border-top-right-radius: 10%;
+        border-top-left-radius: 10%;
+        width: 100%;
+        height: 23rem;
+        box-shadow: 0.2rem 0.2rem 1.8rem rgba(0, 0, 0, 0.235);
+    }
+    #instructor{
+        padding: 100px 40px 100px 40px;
+    }
+    #classes .cards{
+        padding: 10px 40px 30px 70px;
+    }
+}
